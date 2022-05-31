@@ -1,4 +1,6 @@
-const meuProduto = {
+//Cria o seu novo produto - ou seja, o MODELO de seu produto
+
+const Produto = {
   id: String,
   nome: String,
   quantidade: Number,
@@ -15,6 +17,9 @@ function calcular() {
 }
 
 function salvar() {
+  // Cria o seu novo objeto Produto.
+var meuProduto = Object.create(Produto);
+ 
 
   meuProduto.nome = desc.value;
   meuProduto.quantidade = qtd.value;
@@ -31,6 +36,8 @@ function salvar() {
   document.getElementById("tbody").appendChild(tr);
 
   //SAlva o produto na lista de produtos
+
+  console.log(meuProduto);
   produtos.push(meuProduto);
   console.log(produtos);
 }
